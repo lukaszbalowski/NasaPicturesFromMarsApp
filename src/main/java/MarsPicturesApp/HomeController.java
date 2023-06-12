@@ -10,8 +10,8 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(ModelMap model) {
-        model.put("message", "Welcome to Mars Pictures App!");
-        model.put("address", "123 Fakestreet, Mars");
+
+
         return "index";
     }
 
