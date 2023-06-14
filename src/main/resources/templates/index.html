@@ -8,6 +8,11 @@
 
 <H2> Hello World! </H2>
 
+<img th:each= "photo : ${roverData.photos}" th:src="${photo.imgSrc}"/>
+<div th:text="${roverData}">
+
+
+</div>
 
 </body>
 </html>
