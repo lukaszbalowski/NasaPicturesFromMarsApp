@@ -1,5 +1,5 @@
 # Mars Pictures App
-> Aplikacja pobierająca zdjęcia z łazików marsjańskich
+> An application downloading photos from Martian rovers using the API provided by NASA
 
 
 ## Table of Contents
@@ -12,9 +12,9 @@
 
 
 ## General Information
-Aplikacja pobiera zdjęcia z łazików marsjańskich i wyświetla je w przeglądarce.
-Użytkownik może wybrać datę, z której chce pobrać zdjęcia.
-Aplikacja pobiera zdjęcia z API NASA (https://api.nasa.gov/).
+The application retrieves photos from Martian rovers and displays them in a browser. 
+The user can select the date from which they want to download the pictures. 
+The application fetches the photos from NASA's API (https://api.nasa.gov/).
 
 ## Technologies Used
 - Java 17
@@ -30,10 +30,11 @@ Aplikacja pobiera zdjęcia z API NASA (https://api.nasa.gov/).
 
 
 ## Features
-Lista ukończonycj funkcjonalności:
-- Pobieranie zdjęć z API NASA.
-- Wyświetlanie zdjęć w przeglądarce w przejrzyściej formie.
-- Filtrowanie zdjęć według wybranego łazika
+List of completed functionalities:
+
+- Downloading photos from NASA's API.
+- Displaying photos in a clear format in the browser.
+- Filtering photos according to the selected rover.
 
 
 
@@ -51,5 +52,5 @@ Project is: _in progress_
 ## Room for Improvement
 
 To do:
-- Sortowanie zdjęć według daty.
-- Zapisywanie preferencji użytkownika w bazie danych.
+- Sorting photos by date.
+- Saving user preferences in a database.
