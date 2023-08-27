@@ -28,10 +28,10 @@ public class HomeController {
         return "index";
     }
 
-//    @PostMapping("/")
-//    public String home(@RequestParam String marsApiRoverData, ModelMap model ) {
-//        NasaApiResponse roverData = nasaApiService.getRoverData(marsApiRoverData);
-//        model.put("roverData", roverData);
-//        return "index";
-//    }
+    @PostMapping("/")
+    public String postHome(@RequestParam String marsApiRoverData, ModelMap model ) {
+        NasaApiResponse roverData = nasaApiService.getRoverData(marsApiRoverData);
+        model.put("roverData", roverData);
+        return "index";
+    }
 }
