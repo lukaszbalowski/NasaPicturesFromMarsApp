@@ -12,14 +12,22 @@
 <div class="container">
 
     <H2> Nasa API  </H2>
-    <form method="post" action="" id="frmRoverType">
+    <form method="get" action="" id="frmRoverType">
         <input type="hidden" id="marsApiRoverData" name="marsApiRoverData" value=""/>
     <div class="btn-group btn-group-lg " role="group" style="margin: 2em 0em;">
         <button type="button" class="btn btn-secondary" id="marsApiCuriosity">Curiosity</button>
         <button type="button" class="btn btn-secondary" id="marsApiOpportunity">Opportunity</button>
         <button type="button" class="btn btn-secondary" id="marsApiSpirit">Spirit</button>
     </div>
-    </form>
+        <div class="form-group">
+            <label for="marsSol" class="col-form-label col-form-label-lg">Mars Sol </label>
+            <input class="form-control form-control-lg" type="number" id="marsSol" min="0" name="marsSol" value="1" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+
+            </form>
+
+
 
     <div th:each="index : ${#numbers.sequence(0,roverData.photos.size(),4)}" class="row" style="margin-bottom: 2em">
         <div class="col" th:if="${index < roverData.photos.size}">

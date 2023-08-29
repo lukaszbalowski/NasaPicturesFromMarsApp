@@ -19,19 +19,23 @@ public class HomeController {
     NasaApiService nasaApiService;
 
     @GetMapping("/")
-    public String home(ModelMap model, @RequestParam(required = false) String marsApiRoverData) {
+    public String home(ModelMap model, @RequestParam(required = false) String marsApiRoverData,
+                       @RequestParam(required = false) Integer marsSol) {
         if (StringUtils.isEmpty(marsApiRoverData)) {
             marsApiRoverData = "Curiosity";
         }
-        NasaApiResponse roverData = nasaApiService.getRoverData(marsApiRoverData);
+        if (marsSol == null) {
+            marsSol = 1;
+        }
+        NasaApiResponse roverData = nasaApiService.getRoverData(marsApiRoverData, marsSol);
         model.put("roverData", roverData);
         return "index";
     }
 
-    @PostMapping("/")
-    public String postHome(@RequestParam String marsApiRoverData, ModelMap model ) {
-        NasaApiResponse roverData = nasaApiService.getRoverData(marsApiRoverData);
-        model.put("roverData", roverData);
-        return "index";
-    }
+//    @PostMapping("/")
+//    public String postHome(@RequestParam String marsApiRoverData, ModelMap model ) {
+//        NasaApiResponse roverData = nasaApiService.getRoverData(marsApiRoverData);
+//        model.put("roverData", roverData);
+//        return "index";
+//    }
 }
